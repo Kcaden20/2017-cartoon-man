@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Cartoon</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="anime.js"></script>
+    </head>
+    <body>
+        <div class="character-wrap">
+            <div class="head">
+                <div class="eye"></div>
+                <div class="eye"></div>
+                <div class="mouth"></div>
+            </div>
+            <div class="neck"></div>
+            <div class="neck"></div>
+            <div class="neck"></div>
+            <div class="upper-body">
+
+                <div class="torso">
+                    <div class="left-arm">
+                        <div class="left-hand">
+                            <div class="fingers"></div>
+                            <div class="fingers"></div>
+                            <div class="fingers"></div>
+                            <div class="fingers"></div>
+                            <div class="left-thumb"></div>
+                        </div>
+                    </div>
+                <div class="right-arm">
+                    <div class="right-hand">
+                        <div class="fingers"></div>
+                        <div class="fingers"></div>
+                        <div class="fingers"></div>
+                        <div class="fingers"></div>
+                        <div class="right-thumb">
+                        
+                    </div>
+                </div>
+                </div>
+
+            </div>
+            <div class="lower-body">
+                <div class="pelvis"></div>
+                <div class="left-leg">
+                    <div id="left-shoe" class="shoe">
+                    </div>
+                </div>
+                <div class="right-leg">
+                    <div id="right-shoe" class="shoe"></div>
+                </div>
+            </div>
+        </div>
+        <script>
+            var myTimeline = anime.timeline({
+                loop: true,
+                direction: 'alternate',
+                autoplay: true
+            })
+            
+            myTimeline
+            .add({
+                targets: '.eye , .mouth',
+                translateX: [
+                    { value: 20, duration: 1200},
+                    { value: -20, duration: 800},
+                    { value: 0, duration: 2000}
+                ]
+            }) 
+            .add({
+                                
+                    targets: '.eye , .mouth',
+                    translateY: [
+    
+                        { value: -20, duration: 800},
+                        { value: 0, duration: 2000}
+                    ]
+                
+                
+            })
+            
+            .add({
+                targets: '.mouth',
+                borderRadius: 1000,
+                width: [
+                {value: 50, duration: 2000}
+                ],
+                offset: '-=1000'
+            });
+            
+            
+        </script>
+    </body>
+</html>
